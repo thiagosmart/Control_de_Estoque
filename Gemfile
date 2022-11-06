@@ -3,6 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "2.7.0"
 
+gem 'bootstrap-generators', '~> 3.3', '>= 3.3.4'
+gem 'record_tag_helper', '~> 1.0', '>= 1.0.1'
+gem 'will_paginate', '~> 3.3', '>= 3.3.1'
+ '~> 3.7.2'
+gem 'sprockets', '~> 3.7.2'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4"
 
