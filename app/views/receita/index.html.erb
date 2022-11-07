@@ -1,0 +1,33 @@
+<div class="page-header">
+  <%= link_to new_receitum_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Receitum
+  <% end %>
+  <h1>Listing receita</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Nome</th>
+            <th>Descricao</th>
+            <th>Valor</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @receita) do |receitum| %>
+            <td><%= receitum.nome %></td>
+            <td><%= receitum.descricao %></td>
+            <td><%= receitum.valor %></td>
+            <td><%= link_to 'Show', receitum %></td>
+        <td><%= link_to 'Edit', edit_receitum_path(receitum) %></td>
+        <td><%= link_to 'Destroy', receitum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

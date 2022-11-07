@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :receita
+  resources :despesas
+  resources :fornecedores
+  resources :produtos
 
   root "home#index"
   resources :clientes
